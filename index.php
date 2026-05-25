@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
+
 // Récupération des tâches triées du plus récent au plus ancien
 $stmt = $pdo->query("SELECT * FROM todo ORDER BY created_at DESC");
 $taches = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -49,7 +50,7 @@ $taches = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <button type="submit" name="action" value="insert" class="btn btn-primary">Ajouter</button>
         </div>
     </form>
-
+    
     <!-- Liste des tâches -->
     <ul class="list-group">
         <?php foreach ($taches as $tache): ?>
