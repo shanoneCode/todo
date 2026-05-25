@@ -1,7 +1,7 @@
 <?php
 // Connexion à la base de données
 require_once __DIR__ . '/config/db.php';
-$pdo = new PDO('mysql:host=localhost;dbname=tododb;charset=utf8', 'root', '');
+// $pdo = new PDO('mysql:host=localhost;dbname=tododb;charset=utf8', 'root', '');
 
 // Traitement des actions reçues en POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
